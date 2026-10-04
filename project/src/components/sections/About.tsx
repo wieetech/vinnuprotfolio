@@ -40,7 +40,7 @@ export function About() {
               <div className="absolute -inset-0.5 rounded-3xl bg-gradient-to-br from-accent-500/40 via-cyan-400/30 to-violet-500/40 blur-xl opacity-60 group-hover:opacity-90 transition-opacity" />
               <div className="relative aspect-[4/5] overflow-hidden rounded-3xl glass-strong">
                 <img
-                  src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=900"
+                  src="/vinnu.png"
                   alt="Vinuthna Kumar Sallapudi"
                   loading="lazy"
                   className="h-full w-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105"

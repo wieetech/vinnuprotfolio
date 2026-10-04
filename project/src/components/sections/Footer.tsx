@@ -75,7 +75,7 @@ export function Footer() {
           <p className="flex items-center gap-1.5 text-xs text-slate-500">
             Made with <Heart className="h-3 w-3 text-rose-500 fill-rose-500" /> by {PROFILE.name}
             <span className="mx-1.5 text-slate-700">|</span>
-            <span className="text-slate-400">Freelance developer for WIEE Tech</span>
+            <span className="text-slate-400">Freelance developer</span>
           </p>
           <p className="text-xs text-slate-600">
             Copyright {new Date().getFullYear()} {PROFILE.name}. All rights reserved.

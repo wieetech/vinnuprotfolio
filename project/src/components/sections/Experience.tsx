@@ -15,7 +15,7 @@ export function Experience() {
               A timeline of <span className="gradient-text">building & shipping</span>.
             </>
           }
-          description="From recruitment operations to backend engineering — a path shaped by real enterprise work."
+          description="Three-plus years of building AI products, enterprise platforms, APIs, and real-world software at IKRGY Infotech Pvt. Ltd."
         />
 
         <div className="mt-16 relative">

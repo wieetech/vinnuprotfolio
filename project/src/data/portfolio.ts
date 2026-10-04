@@ -4,8 +4,6 @@ import {
   Linkedin,
   Mail,
   Instagram,
-  Youtube,
-  Facebook,
   MessageCircle,
   Globe,
   Phone,
@@ -15,11 +13,10 @@ import {
   Database,
   Brain,
   Activity,
-  Fish,
+  ShoppingBag,
+  Sprout,
   Bot,
   Building2,
-  ClipboardList,
-  Home,
   Sparkles,
   Award,
   GraduationCap,
@@ -29,14 +26,14 @@ import {
 export const PROFILE = {
   name: 'Vinuthna Kumar Sallapudi',
   shortName: 'Vinuthna',
-  title: 'AI Engineer | Full Stack Developer | IoT Engineer | Freelancer for WIEE Tech',
-  roles: ['AI Engineer', 'Freelancer for WIEE Tech', 'Full Stack Developer', 'IoT Engineer'],
+  title: 'AI Engineer | Full Stack Developer | IoT Engineer | Freelancer',
+  roles: ['AI Engineer', 'Freelancer', 'Full Stack Developer', 'IoT Engineer'],
   tagline:
     'Building intelligent software, AI products, enterprise applications, and real-world IoT solutions.',
   subtitle:
-    'I build AI-powered software, enterprise platforms, APIs, and real-world IoT solutions, including freelance work delivered for WIEE Tech.',
+    'I build AI-powered software, enterprise platforms, APIs, and real-world IoT solutions, along with freelance products for growing businesses.',
   intro:
-    'I am an AI Engineer and Full Stack Developer with 1.5+ years of practical experience across recruitment, enterprise software development, backend engineering, AI applications, IoT solutions, and freelance product delivery for WIEE Tech. I specialize in developing scalable web applications, AI-powered systems, enterprise monitoring platforms, cloud-based solutions, and real-time IoT products. I enjoy solving complex problems, building modern digital products, and creating technology that improves people\'s lives.',
+    'I am an AI Engineer and Full Stack Developer with 3+ years of experience at IKRGY Infotech Pvt. Ltd., building enterprise software, AI applications, backend systems, IoT solutions, and real-world digital products. I specialize in developing scalable web applications, AI-powered systems, enterprise platforms, cloud-based solutions, and real-time products that solve meaningful business problems.',
   goal: 'Build reliable AI, software, and IoT products that solve real business problems.',
   email: 'vinuthna433434@gmail.com',
   phone: '+91 9014908994',
@@ -56,8 +53,6 @@ export const SOCIALS: SocialLink[] = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/vinuthna-kumar-sallapudi-284737313/', icon: Linkedin, color: '#3b82f6' },
   { label: 'Email', href: 'mailto:vinuthna433434@gmail.com', icon: Mail, color: '#22d3ee' },
   { label: 'Instagram', href: 'https://www.instagram.com/heart_stealer_vinnu/', icon: Instagram, color: '#ec4899' },
-  // { label: 'YouTube', href: 'https://www.youtube.com/@wieetech', icon: Youtube, color: '#ef4444' },
-  // { label: 'Facebook', href: 'https://www.facebook.com/wieetech', icon: Facebook, color: '#3b82f6' },
   { label: 'WhatsApp', href: 'https://wa.me/919014908994', icon: MessageCircle, color: '#22c55e' },
 ];
 
@@ -71,7 +66,7 @@ export const NAV_LINKS = [
 ];
 
 export const STATS = [
-  { value: 1.5, suffix: '+', label: 'Years Experience' },
+  { value: 3, suffix: '+', label: 'Years Experience' },
   { value: 20, suffix: '+', label: 'Projects Built' },
   { value: 10, suffix: '+', label: 'Technologies' },
   { value: 3, suffix: '', label: 'Domains' },
@@ -89,30 +84,18 @@ export type Experience = {
 
 export const EXPERIENCES: Experience[] = [
   {
-    role: 'IT Recruiter',
-    company: 'Maxzen Tech Solutions Pvt. Ltd.',
-    duration: '1.5 Years',
-    responsibilities: [
-      'End-to-end IT Recruitment',
-      'Technical Screening & Candidate Evaluation',
-      'Communication & Stakeholder Coordination',
-      'Hiring & Talent Acquisition',
-      'Requirement Analysis',
-      'Interview Scheduling',
-      'Recruitment Strategy',
-    ],
-  },
-  {
-    role: 'Senior Associate Engineer',
+    role: 'AI Engineer & Full Stack Developer',
     company: 'IKRGY Infotech Pvt. Ltd.',
-    duration: 'Present',
+    duration: '3+ Years',
     responsibilities: [
       'Backend Development with Python & FastAPI',
       'REST API Design & Architecture',
       'Performance Optimization',
       'Database Design',
-      'Code Review & System Design',
+      'AI Product Development',
       'Enterprise Software Development',
+      'IoT and Real-Time Systems',
+      'Code Review & System Design',
       'Mentoring & Deployment',
     ],
   },
@@ -165,6 +148,7 @@ export const SKILL_GROUPS: SkillGroup[] = [
 ];
 
 export type Project = {
+  group: 'company' | 'freelance' | 'personal';
   title: string;
   category: string;
   icon: LucideIcon;
@@ -182,125 +166,113 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
-    title: 'BYOD Monitoring Application',
-    category: 'Enterprise Monitoring Platform',
-    icon: Activity,
-    description:
-      'A real-time enterprise monitoring platform that tracks network latency, activity latency, internet usage, and system performance across endpoints with a live analytics dashboard.',
-    features: [
-      'Network latency tracking',
-      'Activity latency monitoring',
-      'Internet usage analytics',
-      'Real-time performance dashboard',
-    ],
-    stack: ['FastAPI', 'React', 'PostgreSQL', 'WebSockets'],
-    architecture: 'Event-driven backend with WebSocket streams feeding a React dashboard, persisted in PostgreSQL.',
-    challenge: 'Streaming high-frequency metrics without overwhelming the browser while keeping latency under 200ms.',
-    achievements: ['Deployed for enterprise use', 'Sub-200ms live updates', 'Scalable to 1000+ endpoints'],
-    image:
-      'https://images.pexels.com/photos/5474028/pexels-photo-5474028.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    github: 'https://github.com/vinuthna/byod-monitoring',
-    demo: '#',
-    docs: '#',
-  },
-  {
-    title: 'Aquaculture Monitoring System',
-    category: 'IoT Smart Monitoring',
-    icon: Fish,
-    description:
-      'An IoT-based smart monitoring system using ESP32 and temperature sensors to track water quality and fish health in real time, with MQTT cloud integration.',
-    features: [
-      'ESP32 + temperature sensor',
-      'Water quality monitoring',
-      'Fish monitoring',
-      'Real-time dashboard',
-      'MQTT cloud integration',
-    ],
-    stack: ['ESP32', 'MQTT', 'React', 'FastAPI'],
-    architecture: 'ESP32 nodes publish sensor readings over MQTT to a broker; a FastAPI service ingests and serves a React dashboard.',
-    challenge: 'Reliable sensor reads in harsh aquaculture environments with intermittent connectivity.',
-    achievements: ['24/7 remote monitoring', 'Low-power edge design', 'Cloud-synced telemetry'],
-    image:
-      'https://images.pexels.com/photos/3617456/pexels-photo-3617456.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    github: 'https://github.com/vinuthna/aquaculture-iot',
-    demo: '#',
-    docs: '#',
-  },
-  {
-    title: 'VEE-GPT',
-    category: 'AI Chat Application',
+    group: 'company',
+    title: 'NyroGPT',
+    category: 'AI Chat Product',
     icon: Bot,
     description:
-      'An AI chat application with LLM integration, prompt engineering, streaming responses, authentication, and persistent chat history in a modern responsive UI.',
-    features: [
-      'LLM integration',
-      'Prompt engineering',
-      'Streaming responses',
-      'Authentication & chat history',
-      'Responsive chat UI',
-    ],
+      'An AI product inspired by ChatGPT, designed for conversational assistance with intelligent responses, prompt workflows, and a polished chat experience.',
+    features: ['AI-powered conversations', 'Prompt engineering', 'Streaming responses', 'Conversation history', 'Responsive chat interface'],
     stack: ['React', 'FastAPI', 'OpenAI API', 'PostgreSQL'],
-    architecture: 'FastAPI streams LLM tokens via SSE to a React client; sessions and history persisted in PostgreSQL.',
-    challenge: 'Smooth streaming UX with token-by-token rendering and graceful reconnection.',
-    achievements: ['Real-time streaming chat', 'Auth + history', 'Production-ready UI'],
-    image:
-      'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    github: 'https://github.com/vinuthna/vee-gpt',
-    demo: '#',
-    docs: '#',
+    architecture: 'A FastAPI AI service streams model responses to a React chat interface while user sessions and conversation history are persisted in PostgreSQL.',
+    challenge: 'Creating a reliable, responsive conversational experience with smooth streaming and maintainable AI workflows.',
+    achievements: ['ChatGPT-style product experience', 'Real-time AI responses', 'Reusable AI product workflows'],
+    image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    demo: 'http://nyrogpt.com/',
   },
   {
+    group: 'company',
+    title: 'ICMS',
+    category: 'Integrated Campus Management System',
+    icon: GraduationCap,
+    description:
+      'A complete campus management platform for managing student enrolment, academic operations, administration, and connected institutional workflows.',
+    features: ['Student enrolment', 'Student records', 'Academic management', 'Administration workflows', 'Campus-wide reporting'],
+    stack: ['React', 'Python', 'FastAPI', 'PostgreSQL'],
+    architecture: 'A role-based enterprise platform with modular APIs, centralized student data, and dashboards for campus stakeholders.',
+    challenge: 'Bringing multiple campus processes into one reliable system while keeping workflows clear for students, staff, and administrators.',
+    achievements: ['Centralized campus operations', 'Role-based access workflows', 'Scalable student management foundation'],
+    image: 'https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    demo: 'https://icms.nyrogpt.com/',
+  },
+  {
+    group: 'company',
+    title: 'Sreepudami Product Showcase',
+    category: 'Product Showcase Platform',
+    icon: Globe,
+    description:
+      'A product showcase application for Sreepudami that presents the company\'s products through QR codes and a responsive website experience.',
+    features: ['QR-based product access', 'Product catalogue', 'Responsive website', 'Product details and media', 'Easy customer discovery'],
+    stack: ['React', 'FastAPI', 'PostgreSQL', 'QR Integration'],
+    architecture: 'A product catalogue backend serves QR-linked product pages and a responsive public website for browsing the company\'s offerings.',
+    challenge: 'Making product information immediately accessible from physical QR codes while maintaining a consistent web experience.',
+    achievements: ['QR-enabled product discovery', 'Public product showcase', 'Mobile-friendly catalogue experience'],
+    image: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    github: 'https://github.com/ikrgycloud/updated-qr.git',
+  },
+  {
+    group: 'freelance',
+    title: 'Giftora',
+    category: 'E-commerce Application',
+    icon: ShoppingBag,
+    description:
+      'An e-commerce application for showcasing and selling products online, with a smooth customer journey from product discovery to purchase.',
+    features: ['Product catalogue', 'Product details', 'Shopping experience', 'Customer-friendly UI', 'Responsive storefront'],
+    stack: ['React', 'FastAPI', 'PostgreSQL', 'Tailwind CSS'],
+    architecture: 'A responsive storefront connected to backend product and order APIs with PostgreSQL persistence.',
+    challenge: 'Creating a simple, trustworthy shopping experience that makes products easy to discover and purchase.',
+    achievements: ['Online product storefront', 'Responsive shopping experience', 'Structured product catalogue'],
+    image:
+      'https://images.pexels.com/photos/5632403/pexels-photo-5632403.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    demo: 'https://giftora.co.in/',
+  },
+  {
+    group: 'freelance',
     title: 'Company Portal',
-    category: 'Enterprise Web App',
+    category: 'Business Management Portal',
     icon: Building2,
     description:
-      'A PHP-based company portal with role-based authentication, employee management, and an admin dashboard for internal operations.',
-    features: [
-      'Role-based authentication',
-      'Employee management',
-      'Admin dashboard',
-      'Internal operations',
-    ],
+      'A company portal for managing internal business operations, users, roles, and administrative workflows through one centralized platform.',
+    features: ['Role-based authentication', 'Employee management', 'Admin dashboard', 'Internal operations', 'Centralized records'],
     stack: ['PHP', 'Laravel', 'MySQL'],
-    architecture: 'MVC Laravel app with role middleware and a MySQL data layer.',
-    challenge: 'Designing flexible role permissions without over-engineering.',
-    achievements: ['Role-based access control', 'Admin dashboard shipped'],
+    architecture: 'An MVC Laravel application with role middleware, administrative modules, and a MySQL data layer.',
+    challenge: 'Designing flexible permissions and internal workflows that remain simple for different business roles.',
+    achievements: ['Role-based access control', 'Admin dashboard shipped', 'Centralized business operations'],
     image:
       'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    github: 'https://github.com/vinuthna/company-portal',
-    demo: '#',
+    github: 'https://github.com/vinnu1234-su/Company_Profile.git',
   },
   {
-    title: 'Employee Tracking System',
-    category: 'HR Platform',
-    icon: ClipboardList,
+    group: 'freelance',
+    title: 'Mahogany Website Portal',
+    category: 'Agriculture & Cultivation Platform',
+    icon: Sprout,
     description:
-      'A Laravel-based employee tracking system for attendance, performance, task tracking, and reporting across teams.',
-    features: ['Attendance', 'Performance', 'Task tracking', 'Reports'],
-    stack: ['Laravel', 'MySQL', 'Blade'],
-    architecture: 'Laravel MVC with queued report generation and MySQL storage.',
-    challenge: 'Generating accurate performance reports from heterogeneous data.',
-    achievements: ['Automated reporting', 'Team performance insights'],
+      'A Mahogany cultivation website portal for growing seeds, managing cultivation as a lender, and sharing profit outcomes with the owner.',
+    features: ['Seed and cultivation information', 'Lender-focused portal', 'Growth tracking', 'Owner profit reporting', 'Responsive website'],
+    stack: ['React', 'FastAPI', 'PostgreSQL', 'Tailwind CSS'],
+    architecture: 'A web portal that organizes cultivation information, lender participation, growth updates, and owner-facing profit records.',
+    challenge: 'Presenting a long-term cultivation and profit-sharing process in a clear and trustworthy digital experience.',
+    achievements: ['Mahogany cultivation showcase', 'Lender information portal', 'Profit-sharing visibility'],
     image:
-      'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    github: 'https://github.com/vinuthna/employee-tracking',
-    demo: '#',
+      'https://images.pexels.com/photos/1595104/pexels-photo-1595104.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    github: 'https://github.com/vinnu1234-su/Mahogani_Grove.git',
   },
   {
-    title: 'Property Management Web App',
-    category: 'Real Estate Platform',
-    icon: Home,
+    group: 'personal',
+    title: 'Invisible Assistance',
+    category: 'AI Personal Assistant',
+    icon: Bot,
     description:
-      'A Laravel property management application with property listings, authentication, an admin panel, and a fully responsive UI.',
-    features: ['Property listing', 'Authentication', 'Admin panel', 'Responsive UI'],
-    stack: ['Laravel', 'MySQL', 'Tailwind'],
-    architecture: 'Laravel MVC with image upload pipeline and admin CRUD module.',
-    challenge: 'Building a responsive listing UI that scales across devices.',
-    achievements: ['Responsive design', 'Admin management panel'],
+      'A personal AI assistant concept designed to help with tasks, information, planning, and everyday workflows in the background.',
+    features: ['Natural language interaction', 'Task assistance', 'Information retrieval', 'Workflow support', 'Context-aware responses'],
+    stack: ['React', 'FastAPI', 'OpenAI API', 'PostgreSQL'],
+    architecture: 'A conversational AI service connects user requests to task workflows and persistent context through a responsive client application.',
+    challenge: 'Designing assistance that feels useful and unobtrusive while keeping the user in control of every action.',
+    achievements: ['Personal AI assistant experience', 'Context-aware workflow concept', 'Invisible-by-design interaction model'],
     image:
-      'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    github: 'https://github.com/vinuthna/property-mgmt',
-    demo: '#',
+      'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    github: 'https://github.com/Development-2-product/AI-Assistant.git',
   },
 ];
 
@@ -410,7 +382,7 @@ export const ACHIEVEMENTS = [
   'Developed AI applications',
   'Built IoT products',
   'Created real-time monitoring systems',
-  'Delivered freelance work for WIEE Tech',
+  'Delivered freelance products for growing businesses',
   'Multiple internships completed',
 ];
 
@@ -437,41 +409,63 @@ export const TESTIMONIALS = [
 
 export const BLOG_POSTS = [
   {
-    title: 'Designing Real-Time Monitoring Dashboards with FastAPI',
+    slug: 'invisible-assistance-ai-that-works-like-you',
+    title: 'Invisible Assistance: AI That Works Like You',
     excerpt:
-      'How to stream high-frequency metrics to a React dashboard with WebSockets without melting the browser.',
-    tag: 'Backend',
-    date: 'Coming soon',
-    readTime: '8 min',
+      'Exploring an AI application that understands a specific user, learns their working style, and helps complete tasks with a human-like flow.',
+    tag: 'AI Product',
+    date: 'Featured article',
+    readTime: '6 min',
     image:
-      'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    content: [
+      'Invisible Assistance is a personal AI assistant designed to work in the background, helping a person complete everyday tasks without forcing them to constantly manage the technology.',
+      'The idea is not to create another chat window. It is to create an assistant that understands a specific user\'s preferences, routines, communication style, and goals, then uses that context to make useful decisions within clearly defined boundaries.',
+      'A strong version of this product could organize information, prepare drafts, remember recurring workflows, retrieve the right context, and suggest the next action. It should feel natural because it follows the user\'s way of working instead of asking the user to adapt to a rigid system.',
+      'Trust is central to the experience. Every important action should be visible, controllable, and easy to review. The assistant can automate repetitive work while leaving final ownership with the person it supports.',
+      'The long-term vision is an AI layer that feels almost invisible: present when needed, quiet when not needed, and capable of turning intent into useful action like a reliable human assistant.',
+    ],
   },
   {
-    title: 'From ESP32 to Cloud: A Practical IoT Pipeline',
+    slug: 'building-with-companies-through-freelance-collaboration',
+    title: 'Building With Companies Through Freelance Collaboration',
     excerpt:
-      'A field-tested approach to reliable sensor reads, MQTT, and cloud sync for harsh environments.',
-    tag: 'IoT',
-    date: 'Coming soon',
-    readTime: '10 min',
+      'How collaborating with multiple companies turns real business requirements into useful products, portals, and customer-facing experiences.',
+    tag: 'Freelancing',
+    date: 'New article',
+    readTime: '5 min',
     image:
-      'https://images.pexels.com/photos/3912981/pexels-photo-3912981.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    content: [
+      'Freelance collaboration is an opportunity to work closely with different companies and understand how technology supports their real operations. Every project starts with a business need, not just a list of screens.',
+      'Some companies need an e-commerce experience, while others need a company portal, QR-based product discovery, or a cultivation platform that explains a long-term investment journey. The product is successful when it makes that business easier to understand and easier to operate.',
+      'The most valuable part of this work is translating conversations into simple user flows, dependable backend systems, and interfaces that customers can use without training. Clear communication is as important as the code itself.',
+      'Working with multiple companies also creates a continuous feedback loop. Each collaboration improves how I estimate work, design systems, handle changing requirements, and deliver software that can grow with the business.',
+    ],
   },
   {
-    title: 'Prompt Engineering for Production AI Products',
+    slug: 'launching-new-products-from-idea-to-release',
+    title: 'Launching New Products From Idea to Release',
     excerpt:
-      'Patterns for building LLM features that are reliable, observable, and genuinely useful in enterprise apps.',
-    tag: 'AI',
-    date: 'Coming soon',
-    readTime: '7 min',
+      'A practical look at turning a product idea into a focused release, from defining the user problem to shipping a useful first version.',
+    tag: 'Product Building',
+    date: 'New article',
+    readTime: '5 min',
     image:
-      'https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    content: [
+      'Launching a new product begins with a clear problem. The first version does not need every possible feature; it needs to solve one valuable problem well enough for people to use and respond to it.',
+      'The process usually moves through four stages: understand the user, define the smallest useful workflow, build a reliable foundation, and learn from real usage. This keeps product decisions connected to outcomes instead of assumptions.',
+      'For AI and enterprise products, the foundation matters. Authentication, data design, observability, permissions, and a clear path for future changes should be considered early so the product can move quickly without becoming fragile.',
+      'A launch is not the end of the work. It is the beginning of a feedback cycle that helps improve the experience, prioritize the next features, and turn a promising idea into a dependable product.',
+    ],
   },
 ];
 
 export const CONTACT_METHODS = [
   { label: 'Email', value: PROFILE.email, href: `mailto:${PROFILE.email}`, icon: Mail },
   { label: 'Phone', value: PROFILE.phone, href: 'tel:+919014908994', icon: Phone },
-  { label: 'Website', value: PROFILE.website, href: 'https://wieetech.com', icon: Globe },
+  { label: 'Website', value: PROFILE.website, href: 'https://vinnu.wieetech.com/', icon: Globe },
   { label: 'Location', value: PROFILE.location, href: '#', icon: MapPin },
 ];
 

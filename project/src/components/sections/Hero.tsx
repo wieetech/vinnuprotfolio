@@ -107,7 +107,12 @@ export function Hero() {
           <MagneticButton as="a" href="#contact" onClick={() => go('#contact')} className="btn-ghost">
             <ArrowRight className="h-4 w-4" /> Hire Me
           </MagneticButton>
-          <MagneticButton as="a" href="/Vinnu-Resume.pdf" className="btn-ghost" download="Vinnu-Resume.pdf">
+          <MagneticButton
+            as="a"
+            href="/VinuthnaKumar-sallapudi.pdf"
+            className="btn-ghost"
+            download="VinuthnaKumar-sallapudi.pdf"
+          >
             <Download className="h-4 w-4" /> Resume
           </MagneticButton>
         </motion.div>
